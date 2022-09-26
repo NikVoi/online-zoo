@@ -180,7 +180,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 700px;
 
-    background: url('/rsschool-cv/img/Logo-Panda.png');
+    background: url('/online-zoo/online-zoo//img/Logo-Panda.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -321,7 +321,7 @@ body::-webkit-scrollbar-thumb {
     padding-top: 140px;
     height: 600px;
 
-    background: url('/rsschool-cv/img/flower.png');
+    background: url('/online-zoo/online-zoo//img/flower.png');
     background-repeat: no-repeat;
     background-position:  right 12px;
 }
@@ -375,7 +375,7 @@ p:nth-child(2){margin-bottom: 54px;}
     
     margin-top: 180px;
 
-    background: url('/rsschool-cv/img/strelitzia.png') ,url('/rsschool-cv/img/palm.png');
+    background: url('/online-zoo/online-zoo//img/strelitzia.png') ,url('/online-zoo/online-zoo//img/palm.png');
     background-position: right bottom, left bottom;
     background-repeat: no-repeat;
 }
@@ -972,7 +972,7 @@ form > button:active{
 .testimonials{
     height: 780px;
 
-    background: url('/rsschool-cv/img/leav_foto.png');
+    background: url('/online-zoo/online-zoo//img/leav_foto.png');
     background-repeat: no-repeat;
     background-position: right bottom -130px;
 }
