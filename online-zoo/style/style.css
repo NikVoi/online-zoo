@@ -258,7 +258,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0;
 }
 
-.button--pink{margin-left: 435px; margin-bottom: 30px;}
+.button--pink{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;}
 
 .card__button{
     width: 298px;
@@ -517,6 +520,13 @@ p:nth-child(2){margin-bottom: 54px;}
     margin-bottom: 100px;
 }
 
+.card__flex-mobile{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+}
+
 /*PINK*/
 
 .pink{
@@ -642,7 +652,6 @@ p:nth-child(2){margin-bottom: 54px;}
     position: relative;
 
     padding-left: 10px;
-    margin-left: 450px;
     margin-bottom: 25px;
 
     width: 268px;
@@ -657,11 +666,18 @@ p:nth-child(2){margin-bottom: 54px;}
     backdrop-filter: blur(2px);
 }
 
+.pink__input-div{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
 .pink__dollar{
     position: absolute;
 
-    left: 690px;
-    top: 173px;
+    left: calc(50% - 119.09px/2 + 170px);
+    top: 18px;
 }
 
 .pink__check{
@@ -1292,6 +1308,10 @@ form > button:active{
 }
 
 
+.footer__link{
+    display: none;
+}
+
 
 /***************************/
 /***********MEDIA***********/
@@ -1372,7 +1392,7 @@ form > button:active{
     .card__wrapper {
         margin-bottom: 0px;
 
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .card__item {
@@ -1582,33 +1602,28 @@ form > button:active{
         background-size: 241px 180px, 186px 202px;
     }
     
-    .card__wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: row;
-
-        width: 100%;
-        overflow: hidden;
+    .card__flex-mobile{
+        margin-bottom: 70px;
+    }
     
+    .card__wrapper{
+
+        overflow: hidden;
+
         margin-bottom: 80px;
     }
     
     .card__item{
-        width: 285px;
+        width: 32%;
         height: 332px;
     
         margin: 0 20px 20px;
     
         overflow: hidden;
-    
-        border: 1px solid transparent;
-        background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
-        border-radius: 5px;
-        background: linear-gradient(white, white) padding-box, 
-        linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%) border-box;
-    
-        cursor: pointer;
+    }
+
+    .button__slide {
+        margin-top: 345px;
     }
 
     .card__item:nth-child(3) {
@@ -1702,7 +1717,12 @@ form > button:active{
     .footer__link-mobile > .footer__link{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+
+        margin-left: -80px;
+    }
+
+    .footer__link > a{
+        margin-right: 30px;
     }
 
     .footer__button{
@@ -1719,13 +1739,27 @@ form > button:active{
 
         position: absolute;
 
-        left: calc(50% - 63.12px/2 - 110px);
+        left: calc(50% - 63.12px/2 - 140px);
         top: 440px;
     }
 
     .pink__arrow-mobile--second{
         left: calc(50% - 63.12px/2 + 100px);
         top: 440px;
+    }
+
+    .input__bgLine{
+        width: 90%;
+    }
+
+    .input__wrapper > .input__item:nth-child(1),
+    .input__wrapper > .input__item:nth-child(2),
+    .input__wrapper > .input__item:nth-child(3){
+        display: none;
+    }
+
+    .donate{
+        height: 1500px;
     }
 }
 
@@ -1768,9 +1802,20 @@ form > button:active{
 
         height: 830px;
     }
+    
+    .card__wrapper{
+        overflow: hidden;
 
-    .button__slide{
-        display: none;
+        margin-bottom: 80px;
+    }
+    
+    .card__item{
+        width: 45%;
+        height: 332px;
+    
+        margin: 0 20px 20px;
+    
+        overflow: hidden;
     }
 
     .card__wrapper{
@@ -1845,9 +1890,45 @@ form > button:active{
         top: 670px;
     }
 
+    .input__bgLine{
+        left: 25px;
+    }
+
+    .donate{
+        height: 1540px;
+    }
+
+    .input__price{
+        font-size: 16px;
+    }
+
+    .pink__infoZoo {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .pink__info--img{
+        width: 160px;
+        height: 140px;
+    }
+
+    .pink__info--img > svg{
+        width: inherit;
+        height: inherit;
+    }
+
     .testimonials__title{
         margin-top: 30px;
         margin-bottom: 20px;
+    }
+
+    .pinkFriend--hg{
+        padding: 41px 10px;
+    }
+
+    .div__input{
+        width: 100%;
     }
 
     .testimonials{
@@ -1954,18 +2035,55 @@ form > button:active{
         height: 52px;
     }
 
-    .footer__wrapperBottom{
-    }
-
     .footer__nav{
         width: 100%;
 
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .nav_item{
 
         margin-right: 0px;
+    }
+}
+
+@media (max-width:  661px){
+    .card__wrapper{
+        margin-bottom: auto;
+
+    }
+    
+    .card__flex-mobile{
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: auto;
+    }
+
+    .card__item{
+        width: 285px;
+        height: 332px;
+    
+        margin: 0 20px 20px;
+    
+        overflow: hidden;
+    }
+
+    .button__slide{
+        display: none;
+    }
+
+    .pink{
+        padding: 30px 10px 60px 10px;
+    }
+    
+    .pinkFriend {
+        font-size: 9px;
+        height: 750px;
+    }
+
+    .donate{
+        height: 1350px;
     }
 }
 
@@ -1979,8 +2097,51 @@ form > button:active{
     .pink__arrow-mobile--second{
         left: calc(50% - 63.12px/2 + 90px);
         top: 680px;
+    }   
+
+
+    .donate{
+        height: 1400px;
+    }
+
+    .pinkFriend{
+        height: 700px;
+    }
+    /* .donate{
+       height: 1400px; 
+    } */
+}
+
+@media (max-width: 565px) {
+    .input__wrapper{
+        margin: 20px auto;
+    }
+
+    .input__bgLine{
+        width: 90%;
+        left: 15px;
+    }
+
+    .donate{
+        height: 1400px;
     }
 }
+
+@media (max-width: 389px) {
+    .input__bgLine{
+        width: 87%;
+        left: 15px;
+    }   
+
+    .pinkFriend--hg {
+        padding: 20px 10px;
+    }
+
+    .donate{
+        height: 1400px;
+    }
+}
+
 
 @media (max-width: 383px) {
     .pink__arrow-mobile{
@@ -1991,6 +2152,10 @@ form > button:active{
     .pink__arrow-mobile--second{
         left: calc(50% - 63.12px/2 + 90px);
         top: 710px;
+    }
+
+    .donate{
+        height: 1500px;
     }
 }
 
