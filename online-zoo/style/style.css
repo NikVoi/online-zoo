@@ -255,6 +255,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button--br0{
+    width: 240px;
     border-radius: 0;
 }
 
@@ -532,7 +533,6 @@ p:nth-child(2){margin-bottom: 54px;}
 .pink{
     padding: 30px 30px 60px 30px;
 
-    height: 1000px;
     
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
@@ -550,7 +550,6 @@ p:nth-child(2){margin-bottom: 54px;}
 }
 
 .pinkFriend--hg{
-    height: 964px;
 }
 
 .pink__title{
@@ -631,6 +630,7 @@ p:nth-child(2){margin-bottom: 54px;}
 }
 
 .pink__itemText{
+    font-size: 16px;
     color: #333B41;
 }
 
@@ -869,6 +869,10 @@ a > .footer__social:active{
     display: flex;
 }
 
+.footer__link-mobile{
+    display: none;
+}
+
 .footer__info{
     font-weight: 100;
     color: white;
@@ -1008,7 +1012,7 @@ form > button:active{
 /*DONATE*/
 
 .donate{
-    height: 1482px;
+    padding-bottom: 30px;
 
     color: white;
 
@@ -1215,6 +1219,7 @@ form > button:active{
 }
 
 .input__lable{
+    font-size: 16px;
     position: absolute;
     color: black;
 }
@@ -1225,6 +1230,7 @@ form > button:active{
 
     display: flex;
     justify-content: space-between;
+    text-align: center;
     
     width: 100%;
     margin: 50px auto;
@@ -1472,7 +1478,7 @@ form > button:active{
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
 
     .header{
         height: 34px;
@@ -1714,6 +1720,10 @@ form > button:active{
         top: 18px;
     }
 
+    .footer__link-mobile{
+        display: flex;
+    }
+
     .footer__link-mobile > .footer__link{
         display: flex;
         flex-direction: column;
@@ -1758,9 +1768,6 @@ form > button:active{
         display: none;
     }
 
-    .donate{
-        height: 1500px;
-    }
 }
 
 @media (max-width: 770px) {
@@ -1771,7 +1778,9 @@ form > button:active{
 
     .sectionFT{
         height: 187px;
-      
+
+        background-position: 50% 0;
+        background-size: 150% 120%;
     }
 
     .button__sectionFT{
@@ -1894,10 +1903,6 @@ form > button:active{
         left: 25px;
     }
 
-    .donate{
-        height: 1540px;
-    }
-
     .input__price{
         font-size: 16px;
     }
@@ -1924,7 +1929,7 @@ form > button:active{
     }
 
     .pinkFriend--hg{
-        padding: 41px 10px;
+        padding: 41px 0;
     }
 
     .div__input{
@@ -1952,7 +1957,7 @@ form > button:active{
     }
 
     .footer{
-        padding: 20px 13px 20px 0px;
+        padding: 20px 0 20px 0px;
     }
 
     .footer > .conteiner{
@@ -2047,10 +2052,9 @@ form > button:active{
     }
 }
 
-@media (max-width:  661px){
+@media (max-width:  639px){
     .card__wrapper{
         margin-bottom: auto;
-
     }
     
     .card__flex-mobile{
@@ -2074,20 +2078,20 @@ form > button:active{
     }
 
     .pink{
-        padding: 30px 10px 60px 10px;
+        padding: 30px 0 60px 0;
     }
     
     .pinkFriend {
         font-size: 9px;
-        height: 750px;
     }
 
-    .donate{
-        height: 1350px;
-    }
 }
 
 @media (max-width: 452px) {
+
+    .pink{
+        padding: 20px 10px;
+    }
 
     .pink__arrow-mobile{
         transform: rotate(90deg);
@@ -2098,18 +2102,6 @@ form > button:active{
         left: calc(50% - 63.12px/2 + 90px);
         top: 680px;
     }   
-
-
-    .donate{
-        height: 1400px;
-    }
-
-    .pinkFriend{
-        height: 700px;
-    }
-    /* .donate{
-       height: 1400px; 
-    } */
 }
 
 @media (max-width: 565px) {
@@ -2122,9 +2114,6 @@ form > button:active{
         left: 15px;
     }
 
-    .donate{
-        height: 1400px;
-    }
 }
 
 @media (max-width: 389px) {
@@ -2133,13 +2122,6 @@ form > button:active{
         left: 15px;
     }   
 
-    .pinkFriend--hg {
-        padding: 20px 10px;
-    }
-
-    .donate{
-        height: 1400px;
-    }
 }
 
 
@@ -2154,9 +2136,6 @@ form > button:active{
         top: 710px;
     }
 
-    .donate{
-        height: 1500px;
-    }
 }
 
 @media (max-width: 359px) {
