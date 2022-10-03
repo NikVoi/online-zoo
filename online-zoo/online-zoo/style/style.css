@@ -1777,37 +1777,35 @@ form > button:active{
     }
 
     .sectionFT{
-        height: 187px;
+        height: 373px;
 
         background-position: 50% 0;
-        background-size: 150% 120%;
+        background-size: 120% 120%;
     }
 
     .button__sectionFT{
-        left: calc(50% - 298px/2);
-        top: 200px;
+        left: calc(50% - 298px/2 - 151px);
+        top: 279px;
     }
 
     .sectionFT__circle{
-        width: 119.09px;
-        height: 119.09px;
-        left: calc(50% - 119.09px/2 + 62.45px);
-        top: 22.17px;
+        width: 237px;
+        height: 237px;
+        left: calc(50% - 237.6px/2 + 130.44px);
+        top: 44.23px;
     }
 
     .sectionFT__text{
-        width: 128.13px;
-        height: 102.44px;
-        left: calc(50% - 128.13px/2 + 85.67px);
-        top: 41.12px;
-
-        font-size: 28px;
+        width: 255px;
+        height: 204px;
+        left: calc(50% - 255.64px/2 + 176.76px);
+        top: 82.04px;
     }
 
     .info{
         background-repeat: no-repeat;
         background-position: calc(100% + 60px)  40px;
-        background-size:105px, 217px;
+        background-size: 231px, 476px;
 
         height: 830px;
     }
@@ -2053,6 +2051,50 @@ form > button:active{
 }
 
 @media (max-width:  639px){
+    
+    .header{
+        position: fixed;
+        width: inherit;
+
+        z-index: 100;
+        margin-top: -33px;
+    }
+
+    .sectionFT{
+        height: 186.96px;
+        margin-top: 33px;
+    }
+
+    .sectionFT__circle{
+        width: 119px;
+        height: 119px;
+
+        left: calc(50% - 119.09px/2 + 62.45px);
+        top: 22.17px;
+    }
+    
+    .sectionFT__text{
+        width: 128px;
+        height: 102px;
+
+        left: calc(50% - 128.13px/2 + 85.67px);
+        top: 41.12px;
+
+        font-size: 28px;
+    }
+
+    .button__sectionFT{
+        left: calc(50% - 298px/2);
+        top: 220px;
+    }
+    
+    .info{
+        background-repeat: no-repeat;
+        background-position: calc(100% + 60px)  40px;
+        background-size: 105px, 217px;
+        height: 830px;
+    }
+
     .card__wrapper{
         margin-bottom: auto;
     }
