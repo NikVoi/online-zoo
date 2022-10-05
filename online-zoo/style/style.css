@@ -228,6 +228,10 @@ body::-webkit-scrollbar-thumb {
     color: #FFEE2E;
 }
 
+.sectionFT__posFix{
+    display: none;
+}
+
 .button__sectionFT{
     position: absolute;
     left: calc(50% - 298px/2 + 332px);
@@ -1484,6 +1488,8 @@ form > button:active{
 
     .header{
         height: 34px;
+        position: fixed;
+        z-index: 1000;
     }
 
     .header__logo{
@@ -1560,10 +1566,15 @@ form > button:active{
 
         border-radius: 5px;
     }
-    
 
     .sectionFT{
         height: 373px;
+    }
+
+    .sectionFT__posFix{
+        width: 100%;
+        height: 34px;
+        display: block;
     }
 
     .sectionFT__circle{
