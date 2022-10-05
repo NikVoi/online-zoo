@@ -814,7 +814,7 @@ form > label{
 }
 
 .footer__link{
-    width: 120px;
+    width: 26px;    
 }
 
 .footer__link > a{
@@ -1046,11 +1046,13 @@ form > button:active{
 /*TESTIMONIALS*/
 
 .testimonials{
-    height: 780px;
+    height: 700px;
 
     background: url('/online-zoo/online-zoo//img/leav_foto.png');
     background-repeat: no-repeat;
-    background-position: right bottom -130px;
+    background-position: right bottom -70px;
+
+    background-size: 239px 235px;
 }
 
 .testimonials > .conteiner{
@@ -1109,8 +1111,8 @@ form > button:active{
 
     padding: 15px 16px 19px;
 
-    border-radius: 20px;
 
+    border-radius: 20px;
     border: 2px solid;
 
     background: linear-gradient(#F1F3F2,#F1F3F2) padding-box, 
@@ -1657,6 +1659,13 @@ form > button:active{
         display: none;
     }
  
+    .testimonials{
+        height: 650px;
+
+        background-position: right bottom -50px;
+        background-size: 149px 147px;
+    }
+
     .testimonials__wrapper{
         display: flex;
         flex-direction: column;
@@ -1677,10 +1686,12 @@ form > button:active{
     }
 
     .testimonials__item{
+        overflow: hidden;
+
         margin-bottom: 20px;
     
         width: 100%;
-        height: 107px;
+        height: 109px;
 
         padding: 15px 16px 0;
     }
@@ -1765,6 +1776,11 @@ form > button:active{
     .input__wrapper > .input__item:nth-child(1),
     .input__wrapper > .input__item:nth-child(2),
     .input__wrapper > .input__item:nth-child(3){
+        display: none;
+    }
+
+    .testimonials__item:nth-child(5),
+    .testimonials__item:nth-child(4){
         display: none;
     }
 
@@ -1937,16 +1953,22 @@ form > button:active{
     }
 
     .testimonials{
-        height: 670px;
+        height: 600px;
 
-        background-position:right bottom -30px;
-        background-size: 77px 75px;
+        background-position: right bottom -20px;
+        background-size: 77px 77px;
     }
 
     .testimonials__wrapper{
         width: 100%;
-        height: 520px;
+        height: 400px;
+        
         margin: auto;
+    }
+
+    .testimonials__item:nth-child(5),
+    .testimonials__item:nth-child(4){
+        display: none;
     }
 
     .testimonials__item{
@@ -2003,6 +2025,10 @@ form > button:active{
 
     .footer__link{
         justify-content: space-between;
+    }
+
+    .footer__link > a{
+        width: 20px;
     }
     
     .footer__wrapperTop > a{  
@@ -2083,6 +2109,22 @@ form > button:active{
     
     .pinkFriend {
         font-size: 9px;
+    }
+
+    .info{
+        height: auto;
+    }
+
+    .info__titile{
+        font-size: 24px;
+    }
+
+    p:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    .info__sub-title{
+        margin-bottom: 10px;
     }
 
 }
