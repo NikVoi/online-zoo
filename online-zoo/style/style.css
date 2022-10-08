@@ -1477,8 +1477,6 @@ form > button:active{
         display: none;
     }
 
-   
-
     .button__slide:first-child {
         transform: rotate(180deg);
 
@@ -1518,6 +1516,10 @@ form > button:active{
         margin-bottom: 70px;
     }
 
+    .testimonials{
+        height: auto;
+    }
+
     .testimonials__title{
         margin-top: 100px;
     }
@@ -1534,7 +1536,6 @@ form > button:active{
         width: 940px;
 
         margin: 0 auto 52px;
-
     }
 
     .testimonials__item{
@@ -1767,8 +1768,6 @@ form > button:active{
     }
 
     .testimonials{
-        height: 650px;
-
         background-position: right -15px bottom -45px;
         background-size: 149px 147px;
     }
@@ -1903,7 +1902,12 @@ form > button:active{
         display: none;
     }
 
+    .testimonials{
+        padding-bottom: 80px
+    }
+
     .testimonials__wrapper{
+        height: 360px;
         overflow: hidden;
     }
 
