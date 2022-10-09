@@ -87,6 +87,10 @@ body::-webkit-scrollbar-thumb {
     background-color:#FE9013; 
 }
 
+.noscroll{
+    overflow: hidden;
+}
+
 /*HEADER*/
 
 .header{
@@ -1359,6 +1363,18 @@ form > button:active{
 }
 
 
+
+/***************************/
+/**********borger***********/
+/***************************/
+
+.burger{
+    display: none;
+}
+
+
+
+
 /***************************/
 /***********MEDIA***********/
 /***************************/
@@ -1589,10 +1605,71 @@ form > button:active{
     .header__nav{display: none;}
 
     .header__disigned{display: none;}
+    
+    .header__menu{
+        position: fixed;
+
+        transition: .5s;
+        top: -100%;
+        left: 0;
+        z-index: 1000;
+
+        width: 100%;
+        height: 100%;
+
+        background: white;
+    }
+
+    .header__nav-mobile.active > .header__menu{
+        transition: .5s;
+        
+        top: 0;
+    }
+    
+    .header__menu > a > .header__logo{
+        color: #FE9013;
+        
+        width: 65px;
+        height: 41px;
+
+        text-align: center;
+        border: 1px solid #FE9013;
+        border-radius: 2px;
+    }
+
+    .header__menu > a > .header__logo > h1 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .header__menu > a > .header__logo > h1 > .header__svg{
+        top: 13px;
+        left: 5px;
+    }
+
+    .header__menu > a{
+        display: block;
+        margin: 10px;
+    }
+
+    .header__menu > .header__nav{
+        display: flex;
+        flex-direction: column;
+        margin: 30px 10px;
+    } 
+
+    .header__menu > .header__nav > .nav_item{
+        margin-bottom: 15px;
+    }
+
+    .header__menu > .header__nav > .nav_item > .link{
+        color: #000;
+    } 
 
     .header__nav-mobile{
         display: block;
         position: relative;
+        z-index: 1000;
 
         width: 18px;
         height: 10px;
@@ -1600,21 +1677,15 @@ form > button:active{
         cursor: pointer;
     }
 
-    .header__nav-mobile{
-        display: block;
-        position: relative;
-
-        margin-bottom: 6px;
-
-        cursor: pointer;
-    } 
-
     .header__nav-mobile::before,
     .header__nav-mobile::after{
         content: "";
 
-        background-color: #FFFFFF;
+        transition: .5s;
+        background-color: white;
         position: absolute;
+        z-index: 1000000;
+
 
         width: 100%;
         height: 2px;
@@ -1635,11 +1706,36 @@ form > button:active{
         background-color: #FFFFFF;
         position: absolute;
 
+        transition: .5s;
         width: 100%;
         height: 2px;
         top: 4px;
 
         border-radius: 5px;
+    }
+
+    .header__nav-mobile.active.header__nav-mobile::before{
+        transition: .5s;
+
+        top: 4px;
+
+        background-color: black;
+
+        transform: rotate(-45deg);
+    }
+
+    .header__nav-mobile.active.header__nav-mobile::after{
+        transition: .5s;
+
+        bottom: 4px;
+
+        background-color: black;
+
+        transform: rotate(45deg);
+    }
+
+    .header__nav-mobile.active.header__nav-mobile span{
+        display: none;
     }
 
     .sectionFT{
@@ -2007,9 +2103,6 @@ form > button:active{
 
     .card__flex-mobile-nav{
         display: none;
-    }
-
-    .card__wrapper{
     }
 
     .card__flex-mobile{
