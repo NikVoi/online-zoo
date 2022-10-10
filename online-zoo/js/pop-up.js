@@ -36,6 +36,9 @@ items.forEach(item => {
 
         e.preventDefault();
         commentShow.classList.add("active");
+        
+        commentPos.style.top = 0 + 'px';
+        commentPos.style.opacity = 1;
 
         commentPos.insertAdjacentHTML('afterbegin', commentItemSkeleton);
 

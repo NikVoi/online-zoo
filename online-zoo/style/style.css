@@ -573,6 +573,11 @@ p:nth-child(2){margin-bottom: 54px;}
 
 .card__flex-mobile{
     display: flex;
+    position: relative;
+
+    left: 0;
+
+    transition: 1s;
 }
 
 /*PINK*/
@@ -1413,6 +1418,10 @@ form > button:active{
 
 .popUp__content{
     position: relative;
+    top: 100%;
+    opacity: 0;
+    transition: 5s;
+
     display: block;
     padding: 20px 36px 17px 17px;    
 
