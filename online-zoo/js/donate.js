@@ -1,5 +1,26 @@
-const items = document.querySelectorAll('.input__item');
+const   items = document.querySelectorAll('.input__item'),
+        itemPrice = document.querySelectorAll('.input__price'),
+        input = document.querySelector('#input');
 
+        // console.log(itemPrice.innerHTML.replace('$',''))
+// search el for input value
+input.addEventListener('input', function (){
+    let getValueInput = input.value
+    
+    itemPrice.forEach(price =>{
+        if (Number(getValueInput) === Number(price.innerHTML.replace('$',''))){
+            let ind = price.parentElement;
+
+            items.forEach(item => {
+                deleteElement(item)
+
+                if (!ind.hasAttribute('active')) {
+                    addElement(ind);
+                }
+            });
+        }
+    })
+})
 
 items.forEach(item => {
     item.addEventListener('click', function () {
@@ -22,6 +43,7 @@ let addElement = (element) => {
     element.classList.add('active')
 }
 
+// max leght 4 simvol 
 const inputBox = document.querySelector('.pink__input');
 
 inputBox.oninput = function() {
