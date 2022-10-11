@@ -37,8 +37,11 @@ items.forEach(item => {
         e.preventDefault();
         commentShow.classList.add("active");
         
-        commentPos.style.top = 0 + 'px';
-        commentPos.style.opacity = 1;
+
+        setTimeout(function() {
+            commentPos.style.opacity = 1;
+            commentPos.style.top = 0 + 'px';
+        }, 1);
 
         commentPos.insertAdjacentHTML('afterbegin', commentItemSkeleton);
 
@@ -46,6 +49,8 @@ items.forEach(item => {
             body.classList.add('noscroll');
         }else{
             body.classList.remove('noscroll');
+             
+            
         }
     })
 });
@@ -53,7 +58,13 @@ items.forEach(item => {
 
 closeButton.addEventListener('click', function () {
     if (commentShow.classList.contains("active")){
-        commentShow.classList.remove("active")
-        body.classList.remove('noscroll');
+        commentPos.style.opacity = 0;
+            commentPos.style.top = -50   + 'px';
+        
+        
+        setTimeout(function() {
+            commentShow.classList.remove("active")
+            body.classList.remove('noscroll');
+        }, 200);
     }
 });

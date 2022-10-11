@@ -1164,7 +1164,8 @@ form > button:active{
     box-sizing: border-box;
 
     margin-right: 30px;
-   
+
+    
 
     width: 268px;
     height: 391px;
@@ -1236,12 +1237,18 @@ form > button:active{
 
     text-overflow: clip;
     overflow: hidden;
+    overflow-y: scroll;
 
     font-weight: 300;
     font-size: 15px;
     line-height: 120%;
     
     color: #767474;
+}
+
+.user__comment::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
 }
 
 .div__input{
@@ -1408,6 +1415,8 @@ form > button:active{
     height: 309px;
 
     text-overflow: clip;
+    overflow: hidden;
+    overflow-y: scroll;
 
     font-weight: 300;
     font-size: 15px;
@@ -1416,11 +1425,16 @@ form > button:active{
     color: #767474;
 }
 
+.user__commentPop::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
 .popUp__content{
     position: relative;
-    top: 100%;
+    top: -50px;
     opacity: 0;
-    transition: 5s;
+    transition: .5s;
 
     display: block;
     padding: 20px 36px 17px 17px;    
@@ -1437,6 +1451,8 @@ form > button:active{
     box-sizing: border-box;
 
     margin-right: 30px;
+
+    overflow: hidden;
 
     width: 268px;
     height: 391px;
@@ -2114,6 +2130,12 @@ form > button:active{
     .testimonials__wrapper{
         height: 360px;
         overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    .testimonials__wrapper::-webkit-scrollbar { /* chrome based */
+        width: 0px;  /* ширина scrollbar'a */
+        background: transparent;  /* опционально */
     }
 
     .nav_item{
