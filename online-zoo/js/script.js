@@ -15,8 +15,3 @@ burger = document.querySelector('.header__nav-mobile').addEventListener("click",
         body.classList.remove('noscroll');
     }
 })
-
-
-alert('Большая просьба не проверять до 12.04, примерно к вечеру я закончу полную работа с генерацией карточек и слайдера.\nСпасибо за понимание!\nПо всем вопросам писать в дс)')
-
-
