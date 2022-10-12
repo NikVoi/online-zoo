@@ -72,6 +72,7 @@ prevButtonMobile.addEventListener('click', () => {
     
         doSwipe(sliderFirst, sliderSecond, move);
     }else if(windowWidth < 1000){
+        
         move -= 315;
 
         if(move < 0){
