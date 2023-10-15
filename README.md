@@ -3,7 +3,7 @@
 Online-Zoo is a website dedicated to animal rescue and conservation efforts. This project was developed as part of a front-end web development course and has evolved into a fully interactive and responsive website with features such as modals, animations, and interactive elements.
 
 ## Live Demo
-You can access the live version of the project here: https://nikvoi.github.io/online-zoo/online-zoo/donate.html?donate=on
+You can access the live version of the project here: https://nikvoi.github.io/online-zoo/online-zoo/
 
 ## 🛠 Skills
 - HTML
